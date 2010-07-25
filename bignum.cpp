@@ -108,10 +108,6 @@ Bignum operator* (Bignum a, Bignum b) {
       shift = tmp2 / 10;
     }
     if (shift > 0) tmp.push_back(shift);
-    // printf("Mnoze razy %d \n",b.number[i]);
-    // for(int i = tmp.size() - 1; i >= 0; i--)
-    //   printf("%d ",tmp[i]);
-    // printf("\n");
 
     res = res + Bignum(tmp);
     tmp.resize(0);
@@ -123,32 +119,6 @@ Bignum operator* (Bignum a, Bignum b) {
 }
 
 int main() {
-  Bignum mybig,mybig2,mybig3;
-  mybig = Bignum(13);
-  mybig2 = Bignum(13);
-  mybig3 = Bignum(1);
-
-  for(int i = 0; i <= 50; i++) {
-    
-    // cout << i << " " << mybig3.toString() << " = " << mybig.toString() << " * "
-    // 	 << mybig2.toString() << endl;
-    
-    cout << i << " " << mybig3.toString() << endl;
-
-    mybig = mybig3;
-    mybig3 = mybig3 * mybig2;
-  }
-
-  // mybig3 = Bignum(1);
-  // mybig = Bignum(13);
-  // mybig2 = Bignum(371293);
-  // mybig3 = mybig * mybig2;
-
-  // cout << mybig3.toString() << endl;
-  
-
-  //mybig3 = mybig3 * mybig3;
-  //cout << mybig3.toString() << endl;
 
 return 0;
 }
